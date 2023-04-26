@@ -172,7 +172,7 @@ public class PracticoIntegrador {
 
         Scanner entrada = new Scanner(System.in);
         System.out.println("Indique de que ronda se quiere obtener los resultados:"
-                + " \"1\", \"2\", \"3\" o \"T\" todas:");    //obtencion de datos
+                + " \"1\", \"2\", \"3\" o \"T\" todas:");                           
         String valor = entrada.nextLine();
 
         switch (valor) {

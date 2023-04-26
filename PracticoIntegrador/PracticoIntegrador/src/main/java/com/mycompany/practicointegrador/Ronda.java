@@ -42,19 +42,19 @@ public class Ronda {
             puntajes[a] = 0;
         }
 
-        for (Pronostico s : Pr) {
+        for (Pronostico s : Pr) {                                               //Pronosticos solo de la ronda 1
             if (s.ronda == 1) {
                 TempPr.add(s);
             }
 
         }
-        for (Partido t : Pa) {
+        for (Partido t : Pa) {                                                  //Partidos solo de la ronda 1
             if (t.Ronda == 1) {
                 TempPa.add(t);
             }
         }
 
-        for (Partido t : TempPa) {
+        for (Partido t : TempPa) {                                              //Verificacion de acierto
             for (Pronostico s : TempPr) {
                 if (t.ID_partido == s.Npartido) {
                     if (t.resultadoLocal() == s.getEquipoGanador()) {
@@ -64,7 +64,7 @@ public class Ronda {
             }
         }
 
-        for (int a = 0; a < cantPart; a++) {
+        for (int a = 0; a < cantPart; a++) {                                    //Asignacion de puntos extra
             int PuntajeIdeal = punto * cantPart;
             if (puntajes[a] == PuntajeIdeal) {
                 puntajes[a] = puntajes[a] + bono;
@@ -100,19 +100,19 @@ public class Ronda {
             puntajes[a] = 0;
         }
 
-        for (Pronostico s : Pr) {
+        for (Pronostico s : Pr) {                                               //Pronosticos solo de la ronda 2
             if (s.ronda == 2) {
                 TempPr.add(s);
             }
 
         }
-        for (Partido t : Pa) {
+        for (Partido t : Pa) {                                                  //Partidos solo de la ronda 2
             if (t.Ronda == 2) {
                 TempPa.add(t);
             }
         }
 
-        for (Partido t : TempPa) {
+        for (Partido t : TempPa) {                                              //Verificacion de acierto
             for (Pronostico s : TempPr) {
                 if (t.ID_partido == s.Npartido) {
                     if (t.resultadoLocal() == s.getEquipoGanador()) {
@@ -122,7 +122,7 @@ public class Ronda {
             }
         }
 
-        for (int a = 0; a < cantPart; a++) {
+        for (int a = 0; a < cantPart; a++) {                                    //Asignacion de puntos extra
             int PuntajeIdeal = punto * cantPart;
             if (puntajes[a] == PuntajeIdeal) {
                 puntajes[a] = puntajes[a] + bono;
@@ -157,19 +157,19 @@ public class Ronda {
             puntajes[a] = 0;
         }
 
-        for (Pronostico s : Pr) {
+        for (Pronostico s : Pr) {                                               //Pronosticos solo de la ronda 3
             if (s.ronda == 3) {
                 TempPr.add(s);
             }
 
         }
-        for (Partido t : Pa) {
+        for (Partido t : Pa) {                                                   //Pronosticos solo de la ronda 3
             if (t.Ronda == 3) {
                 TempPa.add(t);
             }
         }
 
-        for (Partido t : TempPa) {
+        for (Partido t : TempPa) {                                              //Verificacion de acierto
             for (Pronostico s : TempPr) {
                 if (t.ID_partido == s.Npartido) {
                     if (t.resultadoLocal() == s.getEquipoGanador()) {
@@ -179,7 +179,7 @@ public class Ronda {
             }
         }
 
-        for (int a = 0; a < cantPart; a++) {
+        for (int a = 0; a < cantPart; a++) {                                    //Asignacion de puntos extra
             int PuntajeIdeal = punto * cantPart;
             if (puntajes[a] == PuntajeIdeal) {
                 puntajes[a] = puntajes[a] + bono;
@@ -203,9 +203,9 @@ public class Ronda {
     }
 
     public void resultadoTotal(ArrayList<Persona> Pe, ArrayList<Partido> Pa, ArrayList<Pronostico> Pr, String archivo) {
-        ArrayList<Pronostico> TempPr1 = new ArrayList<>();
-        ArrayList<Pronostico> TempPr2 = new ArrayList<>();
-        ArrayList<Pronostico> TempPr3 = new ArrayList<>();
+        ArrayList<Pronostico> TempPr1 = new ArrayList<>();                      //Repito las funciones individuales de cada ronda
+        ArrayList<Pronostico> TempPr2 = new ArrayList<>();                      //para implementar la funcion de puntos extra por cada
+        ArrayList<Pronostico> TempPr3 = new ArrayList<>();                      //ronda acertada correctamente.
         ArrayList<Partido> TempPa1 = new ArrayList<>();
         ArrayList<Partido> TempPa2 = new ArrayList<>();
         ArrayList<Partido> TempPa3 = new ArrayList<>();
@@ -223,7 +223,7 @@ public class Ronda {
             puntajes3[a] = 0;
         }
         
-        for (Pronostico s : Pr) {
+        for (Pronostico s : Pr) {                                               
             if (s.ronda == 1) {
                 TempPr1.add(s);
             }
